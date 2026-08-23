@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DarkMirror AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ◉
+            </div>
+
+            <div>
+
+                <h2>DarkMirror</h2>
+
+                <span>AI DECEPTION</span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <button class="nav-item active">
+                🏠 Dashboard
+            </button>
+
+            <button class="nav-item">
+                📡 Telemetry
+            </button>
+
+            <button class="nav-item">
+                🧠 AI Analysis
+            </button>
+
+            <button class="nav-item">
+                🪤 Decoys
+            </button>
+
+            <button class="nav-item">
+                🎯 Sessions
+            </button>
+
+            <button class="nav-item">
+                📊 Analytics
+            </button>
+
+        </nav>
+
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            <div>
+
+                <strong>SYSTEM ONLINE</strong>
+
+                <small>
+                    Simulation Mode
+                </small>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="eyebrow">
+                    PROACTIVE BEHAVIORAL DECEPTION
+                </p>
+
+                <h1>
+                    Security Command Center
+                </h1>
+
+            </div>
+
+
+            <div class="header-status">
+
+                <span class="status-dot"></span>
+
+                LIVE MONITORING
+
+            </div>
+
+        </header>
+
+
+        <!-- STAT CARDS -->
+
+        <section class="stats">
+
+
+            <div class="stat-card">
+
+                <span>
+                    THREAT LEVEL
+                </span>
+
+                <strong id="threatLevel">
+                    LOW
+                </strong>
+
+                <small>
+                    Current environment risk
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    ACTIVE SESSIONS
+                </span>
+
+                <strong id="activeSessions">
+                    0
+                </strong>
+
+                <small>
+                    Monitored sessions
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    ANOMALIES
+                </span>
+
+                <strong id="anomalies">
+                    0
+                </strong>
+
+                <small>
+                    Behavioral deviations
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    DECOYS GENERATED
+                </span>
+
+                <strong id="decoys">
+                    0
+                </strong>
+
+                <small>
+                    Adaptive artifacts
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- ATTACK CONTROL -->
+
+        <section class="control-panel">
+
+            <div>
+
+                <h2>
+                    Attack Simulation
+                </h2>
+
+                <p>
+                    Generate controlled attacker behavior
+                    inside the DarkMirror environment.
+                </p>
+
+            </div>
+
+
+            <div class="actions">
+
+                <button
+                    class="simulate-btn"
+                    id="simulateAttack">
+
+                    🚨 SIMULATE ATTACK
+
+                </button>
+
+
+                <button
+                    class="reset-btn"
+                    id="resetSystem">
+
+                    ↻ RESET
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- TELEMETRY -->
+
+        <section class="panel">
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-label">
+                        LIVE SECURITY TELEMETRY
+                    </span>
+
+                    <h2>
+                        Behavioral Event Stream
+                    </h2>
+
+                </div>
+
+
+                <span class="live-badge">
+                    ● LIVE
+                </span>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                TIME
+                            </th>
+
+                            <th>
+                                METHOD
+                            </th>
+
+                            <th>
+                                ENDPOINT
+                            </th>
+
+                            <th>
+                                STATUS
+                            </th>
+
+                            <th>
+                                RISK
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="eventTable">
+
+                        <tr>
+
+                            <td colspan="5">
+                                Waiting for activity...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOWER DASHBOARD -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- BEHAVIOR -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            MACHINE LEARNING
+                        </span>
+
+                        <h2>
+                            Behavior Analysis
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="metric">
+
+                    <div>
+
+                        <span>
+                            Reconnaissance
+                        </span>
+
+                        <strong id="reconScore">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div
+                            id="reconBar"
+                            class="progress-fill">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="metric">
+
+                    <div>
+
+                        <span>
+                            Enumeration
+                        </span>
+
+                        <strong id="enumScore">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div
+                            id="enumBar"
+                            class="progress-fill">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="metric">
+
+                    <div>
+
+                        <span>
+                            Credential Probing
+                        </span>
+
+                        <strong id="credentialScore">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div
+                            id="credentialBar"
+                            class="progress-fill">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI PANEL -->
+
+            <div class="panel ai-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            LOCAL AI ENGINE
+                        </span>
+
+                        <h2>
+                            Threat Intelligence
+                        </h2>
+
+                    </div>
+
+
+                    <span class="ai-badge">
+                        AI
+                    </span>
+
+                </div>
+
+
+                <div id="aiContent">
+
+                    <div class="ai-empty">
+
+                        🧠
+
+                        <p>
+                            Waiting for behavioral telemetry...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DECOY PANEL -->
+
+        <section class="panel decoy-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-label">
+                        ADAPTIVE DECEPTION
+                    </span>
+
+                    <h2>
+                        Decoy Intelligence
+                    </h2>
+
+                </div>
+
+
+                <span class="decoy-status">
+                    STANDBY
+                </span>
+
+            </div>
+
+
+            <div id="decoyContent">
+
+                <div class="decoy-empty">
+
+                    🪤
+
+                    <h3>
+                        No Active Decoys
+                    </h3>
+
+                    <p>
+                        DarkMirror will generate
+                        context-aware deception artifacts
+                        when suspicious behavior is detected.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
